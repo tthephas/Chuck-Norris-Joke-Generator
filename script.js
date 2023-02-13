@@ -7,30 +7,13 @@ generateJoke()
 
 // USING ASYNC AWAIT
 async function generateJoke() {
-    const config = {
-        headers: {
-            'Accept': 'application/json',
-        },
-    }
-    const res = await fetch('https://icanhazdadjoke.com', config)
 
-    const data = await res.json()
+    const res = await fetch('https://api.chucknorris.io/jokes/random') 
 
-    jokeEl.innerHTML = data.joke
+     const data = await res.json() 
+
+    console.log(data) 
+
+    jokeEl.innerHTML = data.value 
 
 }
-
-// USING .THEN
-// function generateJoke() {
-//     const config = {
-//         headers: {
-//             'Accept': 'application/json',
-//         },
-//     }
-//     fetch('https://icanhazdadjoke.com', config)
-//         .then(res => res.json()
-//         .then(data => {
-//             jokeEl.innerHTML = data.joke
-//         }
-//     ))
-// }
