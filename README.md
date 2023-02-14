@@ -1,4 +1,3 @@
-
 # Chuck-Norris-Jokes
 
 An app that allows you to get Chuck Norris Jokes on demand.
